@@ -570,6 +570,7 @@ void ConceptLda::Write_distributions() {
     psi_out.open(options.output_dir + "/psi.dat");
     for (int t=0; t<B; t++) {
         if (hidden[t+K]) { continue; }
+
         string topic = options.display.labels ? topic_labels[t] : to_string(t);
         psi_out << topic;
         if (options.display.top) {

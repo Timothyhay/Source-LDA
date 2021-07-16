@@ -18,6 +18,10 @@
 using namespace std;
 using namespace std::chrono;
 //----------------------------------------------------------------------------------
+// EDITED BY Ruizhe
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif
 //----------------------------------------------------------------------------------
 SrcLdaOptions::SrcLdaOptions() {
     left = 0.0;
@@ -64,6 +68,7 @@ void SrcLda::Load_corpus(){
 
     for (string line; getline(fin, line);) {
         lines.push_back(line);
+        //std:: cout << (line);
     }
     fin.close();
 
